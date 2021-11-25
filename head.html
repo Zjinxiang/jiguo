@@ -81,7 +81,7 @@
                     <img src="./img/logonew.png" alt="">
                 </li>
                 <li>
-                    <a href="#">首页</a>
+                    <a href="index.html">首页</a>
                 </li>
                 <li>
                     <a href="#">酷玩</a>
@@ -112,3 +112,17 @@
 
 </body>
 </html>
+
+<script src="./js/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $('header nav li p a').each(function(){
+            if($(this)[0].href == String(window.location)){
+                $(this).parent('li').addClass('active')
+            }
+        })
+    })
+
+
+</script>
