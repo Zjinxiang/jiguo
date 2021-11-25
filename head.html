@@ -64,7 +64,11 @@
             color: white;
         }
         
-
+        header{
+            height: 76px;
+            border-bottom: 1px solid #cecfcf;
+            box-shadow: 0 0 5px #cecfcf inset;
+        }
 
 
     </style>
@@ -112,17 +116,3 @@
 
 </body>
 </html>
-
-<script src="./js/jquery.min.js"></script>
-<script>
-
-    $(document).ready(function(){
-        $('header nav li p a').each(function(){
-            if($(this)[0].href == String(window.location)){
-                $(this).parent('li').addClass('active')
-            }
-        })
-    })
-
-
-</script>

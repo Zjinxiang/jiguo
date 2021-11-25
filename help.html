@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/help.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: #fe5341;
+        }
+        header nav{
+            height: 60px;
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+            height: 60px;
+            line-height: 60px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+        header nav ul li img{
+            height: 60px;
+            width: 140px;
+            box-sizing: border-box;
+        }
+        header nav p{
+            height: 60px;
+            width: 120px;
+            line-height: 60px;
+            margin-top: 10px;
+            margin-left: 480px;
+        }
+        header nav p .search{
+            margin-right: 10px;
+            vertical-align: -5px;
+        }
+
+        nav p .reg{
+            border: 1px solid #fe5341;
+            background-color: white;
+            color: #fe5341;
+            padding: 5px 10px;
+        }
+        nav p .reg:hover{
+            background-color: #fe5341;
+            color: white;
+        }
+        
+        header{
+            height: 76px;
+            border-bottom: 1px solid #cecfcf;
+            box-shadow: 0 0 5px #cecfcf inset;
+        }
+        footer .box ul{
+            display: flex;
+            justify-content: center;
+        }
+        footer .box>ul>li{
+            margin: 30px;
+            margin-top: 75px;
+        }
+
+        footer{
+            width: 100%;
+            background: rgb(80,80,80);
+            color: rgb(148,151,152);
+            font-size: 10px;
+        }
+        footer>p{
+            width: 120px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+        footer .box{
+            width: 1200px;
+            margin: 0 auto;
+            height: 320px;
+            justify-content: center;
+        }
+        footer .box li span{
+            color: white;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        footer .box .img{
+            margin-top: 75px;
+        }
+        .img img{
+            width: 150px;
+            height: 150px;
+        }
+        .logo img{
+            margin-bottom: 20px;
+        }
+
+        .nei ul li{
+            margin-right: 10px;
+        }
+
+        .hei{
+            color:rgb(148,151,152) ;
+        }
+        .hei:hover{
+            color:rgb(148,151,152) ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+        </nav>
+    </header>
+
+
+    <div class="content">
+
+        <div class="left">
+            <div class="left_box">
+                <h2>帮助中心</h2>
+                <ul>
+                    <li><a href="#">商务合作</a></li>
+                    <li><a href="#">极果大事件</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">免费试用</a></li>
+                    <li><a href="help.html#mf">试用流程</a></li>
+                    <li><a href="help.html#tg">如何提高效率</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right" id="mf">
+
+            <div class="right_box">
+                <h2>免费试用</h2>
+                <div class="right_info">
+                    <h3>试用流程</h3>
+                    <p>Step1：报名申请试用</p>
+                    <p>Step2：筛选并公布试用名单</p>
+                    <p>Step3：客服电话或短信通知试用者</p>
+                    <p>Step4：收取押金后寄送产品和试用须知</p>
+                    <p>Step5：用户收货并在朋友圈或微博晒单</p>
+                    <p>Step6：试用并在规定时间上传体验报告</p>
+                    <p>Step7：审核报告并确认产品是否回收</p>
+                    <p>Step8：返还试用机，收货后退还押金</p>
+
+                    <h3>试用注意事项</h3>
+                    <p>1. 收到试用通知，2天不回复算弃权</p>
+                    <p>2. 拒缴押金则取消试用资格</p>
+                    <p>3. 试用机被人为损坏须赔偿 Beijing Mini Maker Faire，让更多的普通消费者通过丰富的线下活动来亲身体验新硬件给生活带来的全新改变；</p>
+                    <p>4. 严重拖延报告将影响后续活动资格</p>
+                    <p>5. 30天内不得凭借拉票重复中签试用，以当月首次为准，不得调换，遇有重复则资格顺延。</p>
+                    <p>6. 客服妹妹QQ：3287633427</p>
+
+                    <h3 id="tg">如何提高申请成功率</h3>
+                    <p>1. 完善个人主页，展现专业性（请在手机端页面完善：m.jiguo.com）</p>
+                    <p>2. 试用计划明确且有新意</p>
+                    <p>3. 在社交网络或圈子里有大影响力</p>
+                    <p>4. 使劲拉票，但禁止恶意刷票</p>
+                    <p>5. 认真参与并转发极果的活动</p>
+                    <p>BTW：极果不是福利社，给基友、男友、女友送礼物，献爱心以及完成小时候心愿神马的一概不会通过哦～</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <footer>
+
+        <div class="box">
+
+            <ul>
+                <li class="img">
+                    <img src="./img/code.png" alt="">
+                </li>
+
+                <li class="logo">
+                    <img src="./img/logoImg.jpg" alt="">
+                    <p>全球酷玩试用导购平台</p>
+                    <p>酷·新奇·好玩·品质</p>
+                    <br>
+                    <p>微信添加“JguoJguo”</p>
+                    <p>获取我们的服务</p>
+                </li>
+
+                <li>
+                    <span>免费试用</span>
+                    <p><a class="hei" href="help.html">试用流程</a></p>
+                    <p><a class="hei" href="help.html#tigao">如何提高成功率</a></p>
+                </li>
+
+                <li class="nei">
+                    <span>友情链接</span>
+                    <ul>
+                        <li>
+                            <p>智东西</p>
+                            <p>搜狐IT</p>
+                            <p>搜狐数码</p>
+                            <p>凤凰数码</p>
+                            <p>泡泡网</p>
+                            <p>ZUK社区</p>
+                            <p>极客公园</p>
+                            <p>果库</p>
+                        </li>
+                        <li>
+                            <p>WEIBUSI</p>
+                            <p>腾讯科技</p>
+                            <p>凤凰科技</p>
+                            <p>PConline</p>
+                            <p>3W咖啡</p>
+                            <p>亿觅emie</p>
+                            <p>易迅易启玩</p>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <span>购买攻略</span>
+                    <p>美亚海淘教程</p>
+                    <p>日亚海购教程</p>
+                    <p>海淘转运攻略</p>
+                    <p>kickstarter 众筹购买攻略</p>
+                    <p>indiegogo 众筹购买功略</p>
+                </li>
+
+                <li>
+                    <span>厂商合作</span>
+                    <p>关于极果</p>
+                    <p>联系我们</p>
+                    <p>商务合作：BD@jiguo.com</p>
+                    <p>CEO邮箱：CEO@jiguo.com</p>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <p>© 2016 极果版权所有</p>
+
+    </footer>
+
+</body>
+</html>
