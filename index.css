@@ -54,6 +54,8 @@ nav p .reg:hover{
     background-color: #fe5341;
     color: white;
 }
+
+
 .navigation_button{
     width: 100%;
     height: 300px;
@@ -211,4 +213,35 @@ nav p .reg:hover{
 }
 .swiper-button-next{
     margin-left: 100px;
+}
+
+/* 报告精选 */
+.report_selected{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(247,247,247);
+}
+.navigation_report{
+    width: 1000px;
+    height: 40px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.navigation_report>p:nth-of-type(1){
+    font-size: 20px;
+    font-weight: 400;
+}
+.navigation_report>p:nth-of-type(2){
+    font-size: 15px;
+    color: red;
+}
+.navigation_report span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("./img/readMore.png") no-repeat 2px 2px;
+    vertical-align: -2px;
 }
