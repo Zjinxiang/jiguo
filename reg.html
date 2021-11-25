@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+    </style>
+
+
 </head>
+
 <body>
+
+    <div>
+        <iframe src="head.html" frameborder="0" width="100%" height="70px"></iframe>
+    </div>
+
+    <div class="content">
+        <div class="box">
+
+            <h2>注册极果</h2>
     
-    <div>
-        <iframe src="head.html" frameborder="0" width="100%" height="auto"></iframe>
+            <form action="" method="post" onsubmit="check(this)">
+                <p><input type="text" placeholder="请输入登录手机号" pattern="^1[34578][0-9]{9}$" required="required" name="tel" />
+                </p>
+    
+                <p>
+                    <input type="text" placeholder="请输入图片校验码" required="required" name="imgCode" />
+                    <img src="img/imgCode.jpg" width="132" height="35" />
+                </p>
+    
+                <p>
+                    <input type="text" placeholder="请输入4位数字验证码" pattern="^\d{4}$" required="required" name="code" />
+                    <a href="javascript:void(0)" class="getCode">获取验证码</a>
+                </p>
+    
+                <p><input type="text" placeholder="请输入用户名" required="required" /></p>
+    
+                <p><input type="password" placeholder="请输入新密码" required="required" name="psw1" /></p>
+    
+                <p><input type="password" placeholder="确定新密码" required="required" name="psw2" /></p>
+    
+                <p><button id="submit">立即注册</button></p>
+            </form>
+    
+        </div>
     </div>
-
-    <div>
-
-        <h2>注册极果</h2>
-
-        <form action="" method="post" onsubmit="check(this)">
-            <p>
-                <input type="text" placeholder="请输入登录手机号">
-            </p>
-
-
-        </form>
-
-    </div>
+    
 
 
 </body>
+
 </html>
