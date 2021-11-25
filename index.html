@@ -5,76 +5,236 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>极果</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .navigation_button{
-            width: 1920px;
-            height: 300px;
-            background: url(./img/original.jpg) no-repeat 0 0;
-            position: relative;
-        }
-        .navigation_button .massage{
-            width: 300px;
-            height: 200px;
-            position: absolute;
-            top: 50px;
-            left: 1050px;
-            text-align: right;
-        }
-        .navigation_button .massage p:nth-of-type(1){
-            font-size: 30px;
-            color: white;
-        }
-        .navigation_button .massage div{
-            width: 100%;
-            height: 30px;
-            margin-top: 15px;
-        }
-        .navigation_button .massage div li{
-            display: inline-block;
-            margin-left: 20px;
-            font-size: 15px;
-            line-height: 30px;
-            background-color: rgb(255, 255, 255,.5);
-            color: white;
-            border: 1px solid rgb(255, 255, 255,.5);
-            border-radius: 5px;
-        }
-        .navigation_button .massage p:nth-of-type(2){
-            margin-top: 15px;
-            font-size: 15px;
-            color: white;
-        }
-        .navigation_button .massage p:nth-of-type(3){
-            display: inline-block;
-            width: 250px;
-            height: 40px;
-            text-align: center;
-            background-color: rgb(254,83,65);
-            font-size: 18px;
-            line-height: 40px;
-            color: white;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+    <script src="./swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+        </nav>
+    </header>
+
 
     <div class="navigation_button">
         <div class="massage">
             <p>幻响小贝HiFi2.1音箱</p>
             <div>
-                <li>250人申请</li>
+                <li id="number_people">250人申请</li>
                 <li>￥599</li>
-                <li>300台</li>
+                <li id='number_quantity'>50台</li>
             </div>
             <p class="z_time"></p>
-            <p>立即申请</p>
+            <p class="now_apply">立即申请</p>
         </div>
     </div>
+
+    <!-- 轮播图 -->
+    <div class="swiper_box">
+        <div class="hot_text">
+            热门试用
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot3.jpg">
+						<div class="hot_con">
+							<h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot4.jpg">
+						<div class="hot_con">
+							<h2 class="name">巴慕达 The Toaster 烤面包机</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot5.jpg">
+						<div class="hot_con">
+							<h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot6.jpg">
+						<div class="hot_con">
+							<h2 class="name">空气净化器里面学问多得惊呆你，你选对了吗？</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot1.jpg">
+						<div class="hot_con">
+							<h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/g4.jpg">
+						<div class="hot_con">
+							<h2 class="name">巴慕达 The Toaster 烤面包机</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot5.jpg">
+						<div class="hot_con">
+							<h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/g1.jpg">
+						<div class="hot_con">
+							<h2 class="name">空气净化器里面学问多得惊呆你，你选对了吗？</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot2.jpg">
+						<div class="hot_con">
+							<h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/g2.jpg">
+						<div class="hot_con">
+							<h2 class="name">巴慕达 The Toaster 烤面包机</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot5.jpg">
+						<div class="hot_con">
+							<h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/k1.jpg">
+						<div class="hot_con">
+							<h2 class="name">空气净化器里面学问多得惊呆你，你选对了吗？</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                </div>
+            </div>
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+        </div>
+    </div>
+    
 </body>
 </html>
 
@@ -95,4 +255,47 @@
         },1000)
     }
     timer()
+
+
+    //点击增加人数
+    function clickUpNumber(){
+        var now_apply=document.getElementsByClassName("now_apply")[0];
+        var number_people=document.getElementById('number_people');
+        var number_quantity=document.getElementById('number_quantity');
+        var number=250;
+        var quantity=50;
+        now_apply.onclick=function(){
+            if(quantity<=0){
+                quantity=1;
+                alert('不好意思，商品太火爆，已经被抢空啦！')
+            }
+            number++;
+            quantity--;
+            number_people.innerHTML=number+'人申请';
+            number_quantity.innerHTML=quantity+'台'
+            
+        }
+    }
+    clickUpNumber()
+</script>
+
+
+<script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+        autoplay:true,
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        
+        // 如果需要分页器
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable :true,
+        // },
+        
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }, 
+    })        
 </script>

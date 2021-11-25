@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+
+        }
+        #result{
+            width: 300px;
+            height: 300px;
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn">点击发送请求</button>
+    <div id="result"></div>
+</body>
+<script>
+    const btn =document.getElementById("btn");
+    const result=document.getElementById("result");
+    btn.onclick=function(){
+        const xhr= new XMLHttpRequest();
+        xhr.open("GET",'http://192.168.31.5:3000/useing/public');
+        xhr.send();
+        xhr.onreadystatechange=function(){
+if(xhr.readyState==4){
+    if(xhr.status>=200 && xhr.status<300){
+        console.log("成功");
+        let data = JSON.parse(xhr.responseText);
+    // result.innerHTML= xhr.response
+        show(data)
+    }
+    else{
+        console.log('失败');
+        
+    }
+}
+        }
+    }
+
+    function show(data) {
+        var str = "";
+        for (let i = 0; i < data.length; i++) {
+            str += `<li>
+    <p>描述：${data[i].text}</p>
+    <p>数量：${data[i].num}</p>
+    <p> apply:${data[i].apply}</p>
+    <img src="${data[i].img}" alt="">
+</li>`
+        }
+        // let ul = document.getElementsByClassName("list")[0];
+        result.innerHTML = str
+    }
+</script>
+</html>
