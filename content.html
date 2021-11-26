@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: #fe5341;
+        }
+        header nav{
+            height: 60px;
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+            height: 60px;
+            line-height: 60px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+        header nav ul li img{
+            height: 60px;
+            width: 140px;
+            box-sizing: border-box;
+        }
+        header nav p{
+            height: 60px;
+            width: 120px;
+            line-height: 60px;
+            margin-top: 10px;
+            margin-left: 480px;
+        }
+        header nav p .search{
+            margin-right: 10px;
+            vertical-align: -5px;
+        }
+
+        nav p .reg{
+            border: 1px solid #fe5341;
+            background-color: white;
+            color: #fe5341;
+            padding: 5px 10px;
+        }
+        nav p .reg:hover{
+            background-color: #fe5341;
+            color: white;
+        }
+        
+        header{
+            height: 76px;
+            border-bottom: 1px solid #cecfcf;
+            box-shadow: 0 0 5px #cecfcf inset;
+        }
+        h2{
+           font-weight: 400;
+           text-align: center;
+           margin-top: 40px;
+        }
+        .findlist{
+            display: flex;
+            justify-content: center;
+        }
+        .findlist li{
+            padding: 20px 40px 10px; 
+            color: gray;
+            font-size: 15px;
+        }
+        .findlist li:hover{
+            color: #fe5341;
+            border-bottom: 2px solid #fe5341;
+        }
+        .box{
+            background-color: rgb(247,247,247); 
+        }
+        .box ul{
+            width: 1000px;
+            margin: auto;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            display: flex;
+        }
+        .box ul li{
+            width: 220px;
+            height: 240px;
+            line-height: 20px;
+            margin: 0 37px 37px 0;
+            border: 1px solid #e6e9e9;
+            border-radius: 6px;
+            background: #ffffff;
+        }
+        .box ul li img{
+            border-radius: 6px 6px 0 0;
+            width: 220px;
+        }
+        .box img{
+            height: 125px;
+        }
+        .price {
+            color: #fe5341;
+            font-size: 14px;
+        }
+        .box ul li .info p{
+            font-size: 14px;
+            height: 53px;
+            padding: 7px 10px 10px;
+            color: #474747;
+        }
+        .names span{
+            color: grey;
+            font-size: 12px;
+        }
+        .fix span{
+            display: inline-block;
+        }
+        .zan{
+            width: 20px;
+            background: url(/img/xin.png) no-repeat 2px 3px;
+            padding-left: 17px;
+            margin-left: 70px;
+            font-size: 13px;
+            color: grey;
+        }
+        .look{
+            width: 20px;
+            background: url(/img/reply.png) no-repeat 2px 3px;
+            padding-left: 17px;
+            font-size: 13px;
+            color: grey;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <header>
+
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+
+        </nav>
+        <content>
+            <h2>发现酷玩</h2>
+            <ul class="findlist">
+                <li>最新</li>
+                <li>最热</li>
+                <li>品类</li>
+            </ul>
+            <div class="box">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="/img/k1.jpg">
+                            <div class="info">
+                                <p class="names">SCiO 微型光谱仪<br>
+                                    <span>可以测定食物成分及营养</span>
+                                </p>
+                                <div class="fix">
+                                    <span class="price">￥ 1212</span>
+                                    <span class="zan">3</span>
+                                    <span class="look">3</span>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/img/k2.jpg">
+                            <div class="info">
+                                <p class="names">B&O BeoSound 35 音响<br>
+                                    <span>支持所有音乐流媒体服务</span>
+                                </p>
+                                <div class="fix">
+                                    <span class="price">￥ 512</span>
+                                    <span class="zan">3</span>
+                                    <span class="look">3</span>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/img/k3.jpg">
+                            <div class="info">
+                                <p class="names">Mozbii 触控吸色笔<br>
+                                    <span>能吸取65000种颜色</span>
+                                </p>
+                                <div class="fix">
+                                    <span class="price">￥ 暂无</span>
+                                    <span class="zan">3</span>
+                                    <span class="look">3</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/img/k4.jpg">
+                            <div class="info">
+                                <p class="names">
+                                    XPLORER 2 航拍飞行器<br>
+                                    <span>搭载自动避障系统</span>
+                                </p>
+                                <div class="fix">
+                                    <span class="price">￥ 433</span>
+                                    <span class="zan">3</span>
+                                    <span class="look">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </content>
+
+    </header>
+
+
+</body>
+</html>
+<script>
+    // function show(){
+            var ajax_ = new XMLHttpRequest || new ActiveXObject('Microsoft.XMLHTTP');
+            ajax_.open('get','/js/package-lock.json');
+            ajax_.send();
+
+            ajax_.onreadystatechange = function(){
+                if(ajax_.readyState == 4){
+                    if(ajax_.status== 200){
+                        var res = JSON.parse(ajax_.responseText);
+                        
+                        console.log(res);
+                        
+                    }
+                }
+            }
+
+        // }
+           
+   
+</script>
