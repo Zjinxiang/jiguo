@@ -5,76 +5,369 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>极果</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .navigation_button{
-            width: 1920px;
-            height: 300px;
-            background: url(./img/original.jpg) no-repeat 0 0;
-            position: relative;
-        }
-        .navigation_button .massage{
-            width: 300px;
-            height: 200px;
-            position: absolute;
-            top: 50px;
-            left: 1050px;
-            text-align: right;
-        }
-        .navigation_button .massage p:nth-of-type(1){
-            font-size: 30px;
-            color: white;
-        }
-        .navigation_button .massage div{
-            width: 100%;
-            height: 30px;
-            margin-top: 15px;
-        }
-        .navigation_button .massage div li{
-            display: inline-block;
-            margin-left: 20px;
-            font-size: 15px;
-            line-height: 30px;
-            background-color: rgb(255, 255, 255,.5);
-            color: white;
-            border: 1px solid rgb(255, 255, 255,.5);
-            border-radius: 5px;
-        }
-        .navigation_button .massage p:nth-of-type(2){
-            margin-top: 15px;
-            font-size: 15px;
-            color: white;
-        }
-        .navigation_button .massage p:nth-of-type(3){
-            display: inline-block;
-            width: 250px;
-            height: 40px;
-            text-align: center;
-            background-color: rgb(254,83,65);
-            font-size: 18px;
-            line-height: 40px;
-            color: white;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+        </nav>
+    </header>
+
 
     <div class="navigation_button">
         <div class="massage">
             <p>幻响小贝HiFi2.1音箱</p>
             <div>
-                <li>250人申请</li>
+                <li id="number_people">250人申请</li>
                 <li>￥599</li>
-                <li>300台</li>
+                <li id='number_quantity'>50台</li>
             </div>
             <p class="z_time"></p>
-            <p>立即申请</p>
+            <p class="now_apply">立即申请</p>
         </div>
     </div>
+
+    <!-- 轮播图 -->
+    <div class="swiper_box">
+        <div class="hot_text">
+            热门试用
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot3.jpg">
+						<div class="hot_con">
+							<h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot4.jpg">
+						<div class="hot_con">
+							<h2 class="name">巴慕达 The Toaster 烤面包机</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot5.jpg">
+						<div class="hot_con">
+							<h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot6.jpg">
+						<div class="hot_con">
+							<h2 class="name">空气净化器里面学问多得惊呆你，你选对了吗？</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot1.jpg">
+						<div class="hot_con">
+							<h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/g4.jpg">
+						<div class="hot_con">
+							<h2 class="name">巴慕达 The Toaster 烤面包机</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot5.jpg">
+						<div class="hot_con">
+							<h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/g1.jpg">
+						<div class="hot_con">
+							<h2 class="name">空气净化器里面学问多得惊呆你，你选对了吗？</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                </div>
+                <div class="swiper-slide">
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot2.jpg">
+						<div class="hot_con">
+							<h2 class="name">Liquid Image 338 运动摄像眼镜</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/g2.jpg">
+						<div class="hot_con">
+							<h2 class="name">巴慕达 The Toaster 烤面包机</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/hot5.jpg">
+						<div class="hot_con">
+							<h2 class="name">Osprey小鹰户外运动专业腰包</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                    <li>
+                        <span class="shoufa">首发</span>
+						<img src="http://192.168.31.5:3000/img/k1.jpg">
+						<div class="hot_con">
+							<h2 class="name">空气净化器里面学问多得惊呆你，你选对了吗？</h2>
+							<p class="tabs red">
+									<span>2032</span>
+									<span>20台</span>
+							</p>
+							<p class="sq"><span>1392</span>申请</p>
+							<p class="current red">剩余时间2天</p>
+                        </div>>    
+                    </li>
+                </div>
+            </div>
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- 报告精选 -->
+        <div class="report_selected">
+            <div class="navigation_report">
+                <p>报告精选</p>
+                <p>查看更多<span></span></p>
+            </div>
+            <div class="report_content">
+                <!-- <li>
+                    <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                    <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
+                    <div class="report_content_name">
+                        <p>长安</p>
+                        <p><span></span>3<span></span>3</p>
+                    </div>
+                </li> -->
+            </div>
+        </div>
+
+        <!-- 导购精选 -->
+        <div class="Shoppers_select">
+            <div class="navigation_Shoppers">
+                <p>导购精选</p>
+                <p>查看更多<span></span></p>
+            </div>
+            <div class="Shoppers_content">
+                    <!-- <li>
+                        <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                        <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
+                        <div class="report_content_name">
+                            <p><span id="tu3"></span>3<span id="tu2"></span>3</p>
+                        </div>
+                    </li> -->
+            </div>
+        </div>
+
+
+        <!-- 发现酷玩 -->
+        <div class="found_that_coldplay">
+            <div class="navigation_coldplay">
+                <p>发现酷玩</p>
+                <p>查看更多<span></span></p>
+            </div>
+            <div class="coldplay_content">
+                    <!-- <li>
+                        <img src="http://192.168.31.5:3000/img/hot7.jpg" alt="">
+                        <p>风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</p>
+                        <div class="report_content_name">
+                            <p id="coldplay_price">￥489</p>
+                            <p><span id="tu1"></span>3<span id="tu2"></span>3</p>
+                        </div>
+                    </li> -->
+            </div>
+        </div>
+        <footer>
+
+            <div class="box">
+    
+                <ul>
+                    <li class="img">
+                        <img src="./img/code.png" alt="">
+                    </li>
+    
+                    <li class="logo">
+                        <img src="./img/logoImg.jpg" alt="">
+                        <p>全球酷玩试用导购平台</p>
+                        <p>酷·新奇·好玩·品质</p>
+                        <br>
+                        <p>微信添加“JguoJguo”</p>
+                        <p>获取我们的服务</p>
+                    </li>
+    
+                    <li>
+                        <span>免费试用</span>
+                        <p>试用流程</p>
+                        <p>如何提高成功率</p>
+                    </li>
+    
+                    <li class="nei">
+                        <span>友情链接</span>
+                        <ul>
+                            <li>
+                                <p>智东西</p>
+                                <p>搜狐IT</p>
+                                <p>搜狐数码</p>
+                                <p>凤凰数码</p>
+                                <p>泡泡网</p>
+                                <p>ZUK社区</p>
+                                <p>极客公园</p>
+                                <p>果库</p>
+                            </li>
+                            <li>
+                                <p>WEIBUSI</p>
+                                <p>腾讯科技</p>
+                                <p>凤凰科技</p>
+                                <p>PConline</p>
+                                <p>3W咖啡</p>
+                                <p>亿觅emie</p>
+                                <p>易迅易启玩</p>
+                            </li>
+                        </ul>
+                    </li>
+    
+    
+                    <li>
+                        <span>购买攻略</span>
+                        <p>美亚海淘教程</p>
+                        <p>日亚海购教程</p>
+                        <p>海淘转运攻略</p>
+                        <p>kickstarter 众筹购买攻略</p>
+                        <p>indiegogo 众筹购买功略</p>
+                    </li>
+    
+                    <li>
+                        <span>厂商合作</span>
+                        <p>关于极果</p>
+                        <p>联系我们</p>
+                        <p>商务合作：BD@jiguo.com</p>
+                        <p>CEO邮箱：CEO@jiguo.com</p>
+                    </li>
+    
+                </ul>
+    
+            </div>
+    
+            <p>© 2016 极果版权所有</p>
+    
+        </footer>
+    </div>
+
+
+
+    <!-- 底部 -->
+    
+    
 </body>
 </html>
 
@@ -95,4 +388,146 @@
         },1000)
     }
     timer()
+
+
+    //点击增加人数
+    function clickUpNumber(){
+        var now_apply=document.getElementsByClassName("now_apply")[0];
+        var number_people=document.getElementById('number_people');
+        var number_quantity=document.getElementById('number_quantity');
+        var number=250;
+        var quantity=50;
+        now_apply.onclick=function(){
+            if(quantity<=0){
+                quantity=1;
+                alert('不好意思，商品太火爆，已经被抢空啦！')
+            }
+            number++;
+            quantity--;
+            number_people.innerHTML=number+'人申请';
+            number_quantity.innerHTML=quantity+'台'
+            
+        }
+    }
+    clickUpNumber()
+
+    // 报告精选渲染
+    function reportSelected(){
+        var report_content=document.getElementsByClassName('report_content')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/useing/public'
+        }).then(response=>{
+            let str1=JSON.stringify(response)
+            var str = "";
+            for (let i = 4; i <=11; i++){
+                str += `<li>
+                    <img src="${response.data[i].img}">
+                    <p>${response.data[i].text}</p>
+                    <div>
+                        <p>${response.data[i].uName}</p>
+                        <p>
+                            <span id="tu1">
+                            </span>
+                            3
+                            <span id="tu2">
+                            </span>
+                            3
+                        </p>
+                    </div>
+                </li>`
+            }
+            report_content.innerHTML=str;
+        })
+    }
+    reportSelected()
+    
+
+    // 导购精选渲染
+    function shoppersRendering(){
+        var Shoppers_content=document.getElementsByClassName('Shoppers_content')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/useing/public'
+        }).then(response=>{
+            let str1=JSON.stringify(response)
+            var str = "";
+            for (let i = 1; i <=4; i++){
+                str += `<li>
+                    <img src="${response.data[i].img}">
+                    <p>${response.data[i].text}</p>
+                    <div>
+                        <p>
+                            <span id="tu3">
+                            </span>
+                            3
+                            <span id="tu2">
+                            </span>
+                            3
+                        </p>
+                    </div>
+                </li>`
+            }
+            Shoppers_content.innerHTML=str;
+        })
+    }
+    shoppersRendering()
+
+    // 发现酷玩渲染
+    function foundThatColdplay(){
+        var coldplay_content=document.getElementsByClassName('coldplay_content')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/play/hot'
+        }).then(response=>{
+            console.log(response);
+            // let str1=JSON.stringify(response)
+            // console.log(str1);
+            var str = "";
+            for(let k=1;k<3;k++){
+            for (let i = 0; i <response.data[k].length; i++){
+                str += `<li>
+                    <img src="${response.data[k][i].img}">
+                    <p>${response.data[k][i].text}</p>
+                    <div>
+                        <p id="coldplay_price">${response.data[k][i].price}</p>
+                        <p>
+                            <span id="tu3">
+                            </span>
+                            3
+                            <span id="tu2">
+                            </span>
+                            3
+                        </p>
+                    </div>
+                </li>`
+            }}
+            coldplay_content.innerHTML=str;
+        })
+    }
+    foundThatColdplay()
+        
+
+
+</script>
+
+
+<script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+        autoplay:true,
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        
+        // 如果需要分页器
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable :true,
+        // },
+        
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }, 
+    })        
 </script>
