@@ -405,6 +405,36 @@
     hotnew_();
 
     function hottest_(){
-        var box=document.getElementsByClassName("box")[0];
+        var box=document.getElementsByClassName("uls")[0];
+        axios({
+            method:"get",
+            url:"http://192.168.31.5:3000/play/hot"
+        }).then(response=>{
+            var str ="";
+            for(let k=1;k<3;k++){
+            for(let i=0;i<response.data[k].length;i++){
+                str += `
+
+                    <li>
+                        <a>
+                            <img src="${response.data[k][i].img}">
+                            <p>${response.data[k][i].text}</p>
+                        </a>
+                            <p>
+                                <span class="zan">
+                                    3
+                                </span>
+                                
+                                <span class="look">
+                                    3
+                                </span>
+                                 
+                            </p>
+                    </li>        
+                `
+                }
+            }
+            box.innerHTML=str;
+        })
     }
 </script>
