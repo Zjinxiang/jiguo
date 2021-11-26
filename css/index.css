@@ -5,6 +5,9 @@
 li{
     list-style: none;
 }
+ul>li:nth-of-type(2) a{
+    color: red;
+}
 a{
     text-decoration: none;
     color: black;
