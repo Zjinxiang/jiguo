@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: #fe5341;
+        }
+        header nav{
+            height: 60px;
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+            height: 60px;
+            line-height: 60px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+        header nav ul li img{
+            height: 60px;
+            width: 140px;
+            box-sizing: border-box;
+        }
+        header nav p{
+            height: 60px;
+            width: 120px;
+            line-height: 60px;
+            margin-top: 10px;
+            margin-left: 480px;
+        }
+        header nav p .search{
+            margin-right: 10px;
+            vertical-align: -5px;
+        }
+
+        nav p .reg{
+            border: 1px solid #fe5341;
+            background-color: white;
+            color: #fe5341;
+            padding: 5px 10px;
+        }
+        nav p .reg:hover{
+            background-color: #fe5341;
+            color: white;
+        }
+        
+        header{
+            height: 76px;
+            border-bottom: 1px solid #cecfcf;
+            box-shadow: 0 0 5px #cecfcf inset;
+        }
+
+        h2{
+           font-weight: 400;
+           text-align: center;
+           margin-top: 40px;
+        }
+        .hottest{
+            display: flex;
+            justify-content: center;
+        }
+        .hottest li{
+            padding: 20px 40px 10px; 
+            color: gray;
+            font-size: 15px;
+        }
+        .hottest li:hover{
+            color: #fe5341;
+            border-bottom: 2px solid #fe5341;
+        }
+        .box ul{
+            background-color: rgb(247,247,247); 
+            width: 1200px;
+            margin: auto;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box li{
+            width: 220px;
+            height: 230px;
+            line-height: 20px;
+            margin: 0 37px 37px 0;
+            border: 1px solid #e6e9e9;
+            border-radius: 6px;
+            background: #ffffff;
+        }
+        .box li img{
+            border-radius: 6px 6px 0 0;
+            width: 220px;
+        }
+        .box img{
+            height: 125px;
+        }
+        .box p{
+            padding:5px 8px;
+        }
+        .box p span{
+            display: inline-block;
+        }
+        .zan{
+            width: 20px;
+            background: url(/img/xin.png) no-repeat 2px 3px;
+            padding-left: 17px;
+            margin-left: 120px;
+            font-size: 13px;
+            color: grey;
+        }
+        .look{
+            width: 20px;
+            background: url(/img/reply.png) no-repeat 2px 3px;
+            padding-left: 17px;
+            font-size: 13px;
+            color: grey;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <header>
+
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+
+        </nav>
+
+    </header>
+
+    <content>
+        <h2>导购清单</h2>
+            <ul class="hottest">
+                <li><a onclick="hotnew_()">最新</a> </li>
+                <li><a onclick="hottest_()">最热</a></li>
+            </ul>
+            <div class="box">
+                <ul class="uls">
+                    <li>
+                        <a href="">
+                            <img src="/img/g1.jpg">
+                            <p>他用12年找一把完美 剃须刀，给你2万字终极购买指南</p>
+                        </a>
+                       <p>
+                           <span class="zan">3</span>
+                           <span class="look">3</span>
+                       </p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/img/g2.jpg">
+                            <p>他用12年找一把完美 剃须刀，给你2万字终极购买指南</p>
+                        </a>
+                       <p>
+                           <span class="zan">3</span>
+                           <span class="look">3</span>
+                       </p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/img/g3.jpg">
+                            <p>他用12年找一把完美 剃须刀，给你2万字终极购买指南</p>
+                        </a>
+                       <p>
+                           <span class="zan">3</span>
+                           <span class="look">3</span>
+                       </p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="/img/g4.jpg">
+                            <p>他用12年找一把完美 剃须刀，给你2万字终极购买指南</p>
+                        </a>
+                       <p>
+                           <span class="zan">3</span>
+                           <span class="look">3</span>
+                       </p>
+                    </li>
+                </ul>
+            </div>
+    </content>
+</body>
+</html>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+<script>
+    function hotnew_(){
+        var box =document.getElementsByClassName("uls")[0];
+        axios({
+            method:"get",
+            url:"http://192.168.31.5:3000/play/new"
+        }).then(response=>{
+            var str ="";
+            for(let k=1;k<3;k++){
+            for(let i=0;i<response.data[k].length;i++){
+                str += `
+
+                    <li>
+                        <a>
+                            <img src="${response.data[k][i].img}">
+                            <p>${response.data[k][i].text}</p>
+                        </a>
+                            <p>
+                                <span class="zan">
+                                    3
+                                </span>
+                                
+                                <span class="look">
+                                    3
+                                </span>
+                                 
+                            </p>
+                    </li>        
+                `
+                }
+            }
+            box.innerHTML=str;
+        })
+    }
+
+    hotnew_();
+
+    function hottest_(){
+        var box=document.getElementsByClassName("box")[0];
+    }
+</script>
