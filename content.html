@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: #fe5341;
+        }
+        header nav{
+            height: 60px;
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+            height: 60px;
+            line-height: 60px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+        header nav ul li img{
+            height: 60px;
+            width: 140px;
+            box-sizing: border-box;
+        }
+        header nav p{
+            height: 60px;
+            width: 120px;
+            line-height: 60px;
+            margin-top: 10px;
+            margin-left: 480px;
+        }
+        header nav p .search{
+            margin-right: 10px;
+            vertical-align: -5px;
+        }
+
+        nav p .reg{
+            border: 1px solid #fe5341;
+            background-color: white;
+            color: #fe5341;
+            padding: 5px 10px;
+        }
+        nav p .reg:hover{
+            background-color: #fe5341;
+            color: white;
+        }
+        
+        header{
+            height: 76px;
+            border-bottom: 1px solid #cecfcf;
+            box-shadow: 0 0 5px #cecfcf inset;
+        }
+        h2{
+           font-weight: 400;
+           text-align: center;
+           margin-top: 40px;
+        }
+        .findlist{
+            display: flex;
+            justify-content: center;
+        }
+        .findlist li{
+            padding: 20px 40px 10px; 
+            color: gray;
+            font-size: 15px;
+        }
+        .findlist li:hover{
+            color: #fe5341;
+            border-bottom: 2px solid #fe5341;
+        }
+        .box{
+            background-color: rgb(247,247,247); 
+            width: 1200px;
+            margin: auto;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box li{
+            width: 220px;
+            height: 240px;
+            line-height: 20px;
+            margin: 0 37px 37px 0;
+            border: 1px solid #e6e9e9;
+            border-radius: 6px;
+            background: #ffffff;
+        }
+        .box li img{
+            border-radius: 6px 6px 0 0;
+            width: 220px;
+        }
+        .box img{
+            height: 125px;
+        }
+        .price {
+            color: #fe5341;
+            font-size: 14px;
+        }
+        .box  li .info p{
+            font-size: 14px;
+            height: 53px;
+            padding: 7px 10px 10px;
+            color: #474747;
+        }
+        .names span{
+            color: grey;
+            font-size: 12px;
+        }
+
+
+
+        .fix p{
+            display: inline-block;
+        }
+        .zan{
+            width: 20px;
+            background: url(/img/xin.png) no-repeat 2px 3px;
+            padding-left: 17px;
+            margin-left: 70px;
+            font-size: 13px;
+            color: grey;
+        }
+        .look{
+            width: 20px;
+            background: url(/img/reply.png) no-repeat 2px 3px;
+            padding-left: 17px;
+            font-size: 13px;
+            color: grey;
+        }
+        
+        footer .foot_box  ul{
+            display: flex;
+            justify-content: center;
+        }
+        footer .foot_box >ul>li{
+            margin: 30px;
+            margin-top: 75px;
+        }
+
+        footer{
+            width: 100%;
+            background: rgb(80,80,80);
+            color: rgb(148,151,152);
+            font-size: 10px;
+        }
+        footer>p{
+            width: 120px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+        footer .foot_box {
+            width: 1200px;
+            margin: 0 auto;
+            height: 320px;
+            justify-content: center;
+        }
+        footer .foot_box  li span{
+            color: white;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        footer .foot_box  .img{
+            margin-top: 75px;
+        }
+        .img img{
+            width: 150px;
+            height: 150px;
+        }
+        .logo img{
+            margin-bottom: 20px;
+        }
+
+        .nei ul li{
+            margin-right: 10px;
+        }
+        .hei{
+            color:rgb(148,151,152) ;
+        }
+        .hei:hover{
+            color:rgb(148,151,152) ;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <header>
+
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+
+        </nav>
+    </header>
+        <content>
+            <h2>发现酷玩</h2>
+            <ul class="findlist">
+                <li><a onclick="new_()">最新</a> </li>
+                <li><a onclick="hot">最热</a></li>
+                <li><a href="strain.html">品类</a></li>
+            </ul>
+            <div class="box">
+                <ul>
+                    
+                </ul>
+            </div>
+        </content>
+    
+        <footer>
+
+            <div class="foot_box">
+    
+                <ul>
+                    <li class="img">
+                        <img src="./img/code.png" alt="">
+                    </li>
+    
+                    <li class="logo">
+                        <img src="./img/logoImg.jpg" alt="">
+                        <p>全球酷玩试用导购平台</p>
+                        <p>酷·新奇·好玩·品质</p>
+                        <br>
+                        <p>微信添加“JguoJguo”</p>
+                        <p>获取我们的服务</p>
+                    </li>
+    
+                    <li>
+                        <span>免费试用</span>
+                        <p><a class="hei" href="help.html">试用流程</a></p>
+                        <p><a class="hei" href="help.html#tg">如何提高成功率</a></p>
+                    </li>
+    
+                    <li class="nei">
+                        <span>友情链接</span>
+                        <ul>
+                            <li>
+                                <p>智东西</p>
+                                <p>搜狐IT</p>
+                                <p>搜狐数码</p>
+                                <p>凤凰数码</p>
+                                <p>泡泡网</p>
+                                <p>ZUK社区</p>
+                                <p>极客公园</p>
+                                <p>果库</p>
+                            </li>
+                            <li>
+                                <p>WEIBUSI</p>
+                                <p>腾讯科技</p>
+                                <p>凤凰科技</p>
+                                <p>PConline</p>
+                                <p>3W咖啡</p>
+                                <p>亿觅emie</p>
+                                <p>易迅易启玩</p>
+                            </li>
+                        </ul>
+                    </li>
+    
+    
+                    <li>
+                        <span>购买攻略</span>
+                        <p>美亚海淘教程</p>
+                        <p>日亚海购教程</p>
+                        <p>海淘转运攻略</p>
+                        <p>kickstarter 众筹购买攻略</p>
+                        <p>indiegogo 众筹购买功略</p>
+                    </li>
+    
+                    <li>
+                        <span>厂商合作</span>
+                        <p>关于极果</p>
+                        <p>联系我们</p>
+                        <p>商务合作：BD@jiguo.com</p>
+                        <p>CEO邮箱：CEO@jiguo.com</p>
+                    </li>
+    
+                </ul>
+    
+            </div>
+    
+            <p>© 2016 极果版权所有</p>
+    
+        </footer>
+    
+
+
+</body>
+</html>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+<script>
+    
+    function new_(){
+        var box = document.getElementsByClassName('box')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/play/hot'
+        }).then(response=>{
+            var str = "";
+            for(let k=1;k<3;k++){
+            for (let i = 0; i <response.data[k].length; i++){
+                str += `
+                
+                    <li>
+                        <a>
+                            <img src="${response.data[k][i].img}">
+                            <div class='info'>
+                                <p class="names">${response.data[k][i].text}</p>
+                                <div class="fix">
+                                    <p class="price">${response.data[k][i].price}</p>
+                                    <p>
+                                        <span class="zan">
+                                        </span>
+                                        3
+                                        <span class="look">
+                                        </span>
+                                        3
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                `
+            }}
+            box.innerHTML=str;
+        })
+    }
+
+    new_();
+
+
+    function hot(){
+        var box = document.getElementsByClassName('box')[0];
+
+    }
+
+
+    
+</script>

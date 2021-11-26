@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/report.css">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <ul>
+                <li>
+                    <img src="./img/logonew.png" alt="">
+                </li>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">酷玩</a>
+                </li>
+                <li>
+                    <a href="#">导购</a>
+                </li>
+                <li>
+                    <a href="#">试用</a>
+                </li>
+                <li>
+                    <a href="#">报告</a>
+                </li>
+            </ul>
+
+            <p>
+                <a href="#" class="search">
+                    <img src="./img/search.png" alt="">
+                </a>
+
+                <a class="reg" href="reg.html">注册</a>
+            </p>
+
+        </nav>
+
+    </header>
+
+
+    <section>
+
+        <h1>体检报告</h1>
+
+
+        <div>
+            <a class="on" onclick="report()">最新</a>
+            <a class="hot" onclick="rhot()">最热</a>
+        </div>
+
+    </section>
+
+    <div class="content">
+
+        <div class="content_box">
+
+            <ul class="left">
+
+            </ul>
+
+            <aside class="right">
+
+                <div class="try">
+                    <h2>极果体验师</h2>
+                    <div>
+                        <img src="./img/tiyanImg.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="fuli">
+                    <h5>福利</h5>
+                    <p>第一时间体验新品，大众试用优先通过，还有定向邀请试用，新品玩到手软</p>
+                    <h5>要求</h5>
+                    <p>是某个领域的大神级玩家，在社交网络或圈子里有大影响力，善写作会拍摄。</p>
+                    <h5>申请</h5>
+                    <p>1. 关注极果公众号：jguojguo
+                        （或扫描下方二维码）</p>
+                    <p>
+                        2. 在公众号内回复：体验师
+                    </p>
+                </div>
+
+                <div class="erweima">
+                    <img src="./img/myCode.jpg" alt="">
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="box">
+
+            <ul>
+                <li class="img">
+                    <img src="./img/code.png" alt="">
+                </li>
+
+                <li class="logo">
+                    <img src="./img/logoImg.jpg" alt="">
+                    <p>全球酷玩试用导购平台</p>
+                    <p>酷·新奇·好玩·品质</p>
+                    <br>
+                    <p>微信添加“JguoJguo”</p>
+                    <p>获取我们的服务</p>
+                </li>
+
+                <li>
+                    <span>免费试用</span>
+                    <p><a class="hei" href="help.html">试用流程</a></p>
+                    <p><a class="hei" href="help.html#tg">如何提高成功率</a></p>
+                </li>
+
+                <li class="nei">
+                    <span>友情链接</span>
+                    <ul>
+                        <li>
+                            <p>智东西</p>
+                            <p>搜狐IT</p>
+                            <p>搜狐数码</p>
+                            <p>凤凰数码</p>
+                            <p>泡泡网</p>
+                            <p>ZUK社区</p>
+                            <p>极客公园</p>
+                            <p>果库</p>
+                        </li>
+                        <li>
+                            <p>WEIBUSI</p>
+                            <p>腾讯科技</p>
+                            <p>凤凰科技</p>
+                            <p>PConline</p>
+                            <p>3W咖啡</p>
+                            <p>亿觅emie</p>
+                            <p>易迅易启玩</p>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <span>购买攻略</span>
+                    <p>美亚海淘教程</p>
+                    <p>日亚海购教程</p>
+                    <p>海淘转运攻略</p>
+                    <p>kickstarter 众筹购买攻略</p>
+                    <p>indiegogo 众筹购买功略</p>
+                </li>
+
+                <li>
+                    <span>厂商合作</span>
+                    <p>关于极果</p>
+                    <p>联系我们</p>
+                    <p>商务合作：BD@jiguo.com</p>
+                    <p>CEO邮箱：CEO@jiguo.com</p>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <p>© 2016 极果版权所有</p>
+
+    </footer>
+    
+
+
+    
+</body>
+</html>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+
+<script>
+
+    function report(){
+
+        var box = document.getElementsByClassName('left')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/report/new'
+        }).then(response=>{
+            console.log(response.data);
+            console.log(response.data[0].img);
+            var str='';
+                for(k=0;k<response.data.length;k++){
+                    str+=`
+                    <li>
+                        <a>
+                            <img src="${response.data[k].img}">
+                            <div class='info'>
+                                <p>${response.data[k].text}</p>
+                                <div class='btm'>
+                                    <div>
+                                        <span>${response.data[k].uName}</span>
+                                        <span>${response.data[k].endTime}</span>      
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    `
+                }
+            box.innerHTML=str
+
+        })
+
+
+    }
+
+    report();
+
+
+
+    function rhot(){
+        var box = document.getElementsByClassName('left')[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/report/hot'
+        }).then(response=>{
+            console.log(response.data);
+            console.log(response.data[0].img);
+            var str='';
+                for(k=0;k<response.data.length;k++){
+                    str+=`
+                    <li>
+                        <a>
+                            <img src="${response.data[k].img}">
+                            <div class='info'>
+                                <p>${response.data[k].text}</p>
+                                <div class='btm'>
+                                    <div>
+                                        <span>${response.data[k].uName}</span>
+                                        <span>${response.data[k].endTime}</span>      
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    `
+                }
+            box.innerHTML=str
+
+        })
+    }
+
+</script>
+
+
+
