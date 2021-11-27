@@ -246,9 +246,9 @@
         <content>
             <h2>发现酷玩</h2>
             <ul class="findlist">
-                <li><a onclick="new_()">最新</a> </li>
-                <li><a onclick="hot">最热</a></li>
-                <li><a href="strain.html">品类</a></li>
+                <li><a onclick="new_()" class="hn_">最新</a> </li>
+                <li><a onclick="hot()" class="hest_">最热</a></li>
+                <li><a href="strain.html" class="pin">品类</a></li>
             </ul>
             <div class="box">
                 <ul>
@@ -340,7 +340,10 @@
 <script>
     
     function new_(){
+        var hn_=document.getElementsByClassName("hn_")[0];
+        var hest_=document.getElementsByClassName("hest_")[0];
         var box = document.getElementsByClassName('box')[0];
+        var pin_=document.getElementsByClassName("pin")[0];
         axios({
             method:'get',
             url:'http://192.168.31.5:3000/play/hot'
@@ -373,6 +376,9 @@
             }}
             box.innerHTML=str;
         })
+        hn_.style.color='red';
+        hest_.style.color='rgb(184, 181, 181)';
+        pin_.style.color='rgb(184, 181, 181)';
     }
 
     new_();
@@ -380,7 +386,44 @@
 
     function hot(){
         var box = document.getElementsByClassName('box')[0];
-
+        var hn_=document.getElementsByClassName("hn_")[0];
+        var hest_=document.getElementsByClassName("hest_")[0];
+        var pin_=document.getElementsByClassName("pin")[0];
+        axios({
+            method:'get',
+            url:'http://192.168.31.5:3000/play/hot'
+        }).then(response=>{
+            var str = "";
+            for(let k=1;k<3;k++){
+            for (let i = 0; i <response.data[k].length; i++){
+                str += `
+                
+                    <li>
+                        <a>
+                            <img src="${response.data[k][i].img}">
+                            <div class='info'>
+                                <p class="names">${response.data[k][i].text}</p>
+                                <div class="fix">
+                                    <p class="price">${response.data[k][i].price}</p>
+                                    <p>
+                                        <span class="zan">
+                                        </span>
+                                        3
+                                        <span class="look">
+                                        </span>
+                                        3
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                `
+            }}
+            box.innerHTML=str;
+        })
+        hn_.style.color='rgb(184, 181, 181)';
+        hest_.style.color='red';
+        pin_.style.color='rgb(184, 181, 181)';
     }
 
 

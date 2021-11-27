@@ -47,7 +47,7 @@
 
     <section>
 
-        <h1>体检报告</h1>
+        <h1>体验报告</h1>
 
 
         <div>
@@ -185,6 +185,8 @@
     function report(){
 
         var box = document.getElementsByClassName('left')[0];
+        var on_=document.getElementsByClassName("on")[0];
+        var hot_=document.getElementsByClassName("hot")[0];
         axios({
             method:'get',
             url:'http://192.168.31.5:3000/report/new'
@@ -214,7 +216,8 @@
 
         })
 
-
+        on_.style.color='red';
+        hot_.style.color='rgb(184, 181, 181)';
     }
 
     report();
@@ -223,6 +226,8 @@
 
     function rhot(){
         var box = document.getElementsByClassName('left')[0];
+        var on_=document.getElementsByClassName("on")[0];
+        var hot_=document.getElementsByClassName("hot")[0];
         axios({
             method:'get',
             url:'http://192.168.31.5:3000/report/hot'
@@ -251,6 +256,8 @@
             box.innerHTML=str
 
         })
+        on_.style.color='rgb(184, 181, 181)';
+        hot_.style.color='red';
     }
 
 </script>
