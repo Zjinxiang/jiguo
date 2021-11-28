@@ -237,8 +237,8 @@
     <content>
         <h2>导购清单</h2>
             <ul class="hottest">
-                <li><a onclick="hotnew_()">最新</a> </li>
-                <li><a onclick="hottest_()">最热</a></li>
+                <li ><a onclick="hotnew_()" class="hn_">最新</a> </li>
+                <li ><a onclick="hottest_()" class="hest_">最热</a></li>
             </ul>
             <div class="box">
                 <ul class="uls">
@@ -370,6 +370,8 @@
 <script>
     function hotnew_(){
         var box =document.getElementsByClassName("uls")[0];
+        var hn_=document.getElementsByClassName("hn_")[0];
+        var hest_=document.getElementsByClassName("hest_")[0];
         axios({
             method:"get",
             url:"http://192.168.31.5:3000/play/new"
@@ -400,12 +402,18 @@
             }
             box.innerHTML=str;
         })
+        
+        hn_.style.color='red';
+        hest_.style.color='rgb(184, 181, 181)';
+
     }
 
     hotnew_();
 
     function hottest_(){
         var box=document.getElementsByClassName("uls")[0];
+        var hn_=document.getElementsByClassName("hn_")[0];
+        var hest_=document.getElementsByClassName("hest_")[0];
         axios({
             method:"get",
             url:"http://192.168.31.5:3000/play/hot"
@@ -436,5 +444,9 @@
             }
             box.innerHTML=str;
         })
+        hn_.style.color='rgb(184, 181, 181)';
+        hest_.style.color='red';
     }
+
+
 </script>
